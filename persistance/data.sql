@@ -48,3 +48,6 @@ INSERT INTO notesEleves (idEleve, idMatiere, valeurNote) VALUES
 (2, 1, 10.00), 
 (2, 4, 13.50), 
 (2, 9, 12.00);
+
+INSERT INTO users (email, password)
+VALUES ('admin@sysinfo.mg', 'password');

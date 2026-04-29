@@ -27,9 +27,16 @@ class NotesController extends BaseController
      */
     public function index(): string
     {
+        $db = \Config\Database::connect();
+        $eleves = $db->table('eleves e')
+            ->select('e.id, e.nom, e.ETU, e.idParcours, p.nomParcours')
+            ->join('parcours p', 'e.idParcours = p.id', 'left')
+            ->get()
+            ->getResultArray();
+
         $data = [
             'title'   => 'Gestion des Notes',
-            'eleves'  => $this->elevesModel->findAll(),
+            'eleves'  => $eleves,
         ];
 
         return view('notes/liste-eleves', $data);
