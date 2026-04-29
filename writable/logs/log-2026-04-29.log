@@ -1,0 +1,355 @@
+ERROR - 2026-04-29 08:12:40 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->index()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->index()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2026-04-29 08:12:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: notes]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+ERROR - 2026-04-29 08:12:41 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->index()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->index()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2026-04-29 08:12:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: notes]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+ERROR - 2026-04-29 08:13:04 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(98): CodeIgniter\BaseModel->find()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->show()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(98): CodeIgniter\BaseModel->find()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->show()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2026-04-29 08:13:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: notes/show/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/NotesController.php(98): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->show()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+ERROR - 2026-04-29 08:13:42 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->index()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+#6 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(951): App\Controllers\NotesController->index()
+#7 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2026-04-29 08:13:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: notes]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/NotesController.php(33): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:23:28 --> ErrorException: include(/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/layouts/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: notes]
+in APPPATH/Views/AjoutNotes.php on line 1.
+ 1 APPPATH/Views/AjoutNotes.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/AjoutNotes.php(1): include()
+ 3 SYSTEMPATH/View/View.php(240): include('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/AjoutNotes.php')
+ 4 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/NotesController.php(64): view()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:23:30 --> ErrorException: include(/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/layouts/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: notes]
+in APPPATH/Views/AjoutNotes.php on line 1.
+ 1 APPPATH/Views/AjoutNotes.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/AjoutNotes.php(1): include()
+ 3 SYSTEMPATH/View/View.php(240): include('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/AjoutNotes.php')
+ 4 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/NotesController.php(64): view()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:23:36 --> ErrorException: include(/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/layouts/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: notes]
+in APPPATH/Views/AjoutNotes.php on line 1.
+ 1 APPPATH/Views/AjoutNotes.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/AjoutNotes.php(1): include()
+ 3 SYSTEMPATH/View/View.php(240): include('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/AjoutNotes.php')
+ 4 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/NotesController.php(64): view()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:23:37 --> ErrorException: include(/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/layouts/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: notes]
+in APPPATH/Views/AjoutNotes.php on line 1.
+ 1 APPPATH/Views/AjoutNotes.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/AjoutNotes.php(1): include()
+ 3 SYSTEMPATH/View/View.php(240): include('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/AjoutNotes.php')
+ 4 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/NotesController.php(64): view()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:26:14 --> ParseError: syntax error, unexpected identifier "via"
+[Method: GET, Route: notes]
+in APPPATH/Controllers/NotesController.php on line 106.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(792): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:26:15 --> ParseError: syntax error, unexpected identifier "via"
+[Method: GET, Route: notes]
+in APPPATH/Controllers/NotesController.php on line 106.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(792): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:27:56 --> ParseError: syntax error, unexpected identifier "via"
+[Method: GET, Route: notes]
+in APPPATH/Controllers/NotesController.php on line 106.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(792): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:27:59 --> ParseError: syntax error, unexpected identifier "via"
+[Method: GET, Route: notes]
+in APPPATH/Controllers/NotesController.php on line 106.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(792): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:29:08 --> ParseError: syntax error, unexpected identifier "via"
+[Method: GET, Route: notes]
+in APPPATH/Controllers/NotesController.php on line 106.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(792): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
+CRITICAL - 2026-04-29 08:31:18 --> ErrorException: include(/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/layouts/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: notes]
+in APPPATH/Views/notes/liste-eleves.php on line 1.
+ 1 APPPATH/Views/notes/liste-eleves.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/notes/liste-eleves.php(1): include()
+ 3 SYSTEMPATH/View/View.php(240): include('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/app/Views/notes/liste-eleves.php')
+ 4 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/NotesController.php(35): view()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\NotesController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/hp/Documents/ITU/S4/SI/TP-CODEIGNITER/git-clones/Matieres/public/index.php')
