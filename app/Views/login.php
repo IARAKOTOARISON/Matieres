@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login SysInfo</title>
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
@@ -36,7 +36,8 @@
     <?php endif; ?>
 
     <!-- FORM -->
-    <form method="post" action="/login">
+    <form method="post" action="<?= base_url('login') ?>">
+      <?= csrf_field() ?>
 
       <div class="field-group">
         <label>Email</label>

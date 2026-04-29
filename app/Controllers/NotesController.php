@@ -27,6 +27,11 @@ class NotesController extends BaseController
      */
     public function index(): string
     {
+        // Vérifier que l'utilisateur est connecté
+        if (!session()->get('user')) {
+            return redirect()->to('/login');
+        }
+
         $db = \Config\Database::connect();
         $eleves = $db->table('eleves e')
             ->select('e.id, e.nom, e.ETU, e.idParcours, p.nomParcours')
@@ -93,9 +98,16 @@ class NotesController extends BaseController
         }
 
         $notes = $this->request->getPost('notes') ?? [];
+        $semesters = $this->request->getPost('semesters') ?? [];
 
         foreach ($notes as $idMatiere => $valeurNote) {
             $valeurNote = trim($valeurNote);
+            $numSemestre = isset($semesters[$idMatiere]) ? (int)$semesters[$idMatiere] : null;
+
+            // Valider le semestre
+            if ($numSemestre === null || $numSemestre < 1 || $numSemestre > 8) {
+                return redirect()->back()->withInput()->with('error', 'Semestre invalide pour la matière ID ' . $idMatiere);
+            }
 
             // Vérifier si une note existe déjà
             $noteExistante = $this->notesElevesModel->where('idEleve', $idEleve)
@@ -112,6 +124,7 @@ class NotesController extends BaseController
                     // Mise à jour
                     $this->notesElevesModel->update($noteExistante['id'], [
                         'valeurNote' => $valeurNote,
+                        'numSemestre' => $numSemestre,
                     ]);
                 } else {
                     // Insertion
@@ -119,6 +132,7 @@ class NotesController extends BaseController
                         'idEleve' => $idEleve,
                         'idMatiere' => $idMatiere,
                         'valeurNote' => $valeurNote,
+                        'numSemestre' => $numSemestre,
                     ]);
                 }
             } elseif ($noteExistante) {

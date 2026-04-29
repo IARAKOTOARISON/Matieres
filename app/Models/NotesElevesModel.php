@@ -18,6 +18,7 @@ class NotesElevesModel extends Model
         'idEleve',
         'idMatiere',
         'valeurNote',
+        'numSemestre',
     ];
 
     protected $useTimestamps = false;
@@ -26,6 +27,7 @@ class NotesElevesModel extends Model
         'idEleve'   => 'required|integer',
         'idMatiere' => 'required|integer',
         'valeurNote' => 'permit_empty|decimal',
+        'numSemestre' => 'required|integer|in_list[3,4]',
     ];
 
     protected $validationMessages = [
@@ -39,6 +41,12 @@ class NotesElevesModel extends Model
         ],
         'valeurNote' => [
             'decimal' => 'La note doit être un nombre décimal valide.',
+        ],
+        'numSemestre' => [
+            'required' => 'Le numéro de semestre est requis.',
+            'integer'  => 'Le numéro de semestre doit être un nombre entier.',
+            'greater_than' => 'Le semestre doit être au minimum 1.',
+            'less_than_equal_to' => 'Le semestre doit être au maximum 8.',
         ],
     ];
 

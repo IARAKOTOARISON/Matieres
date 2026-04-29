@@ -38,16 +38,21 @@ INSERT INTO eleves (nom, ETU, idParcours) VALUES
 ('Rova Malalatiana', 4404, 3);    -- Web et Design
 
 -- Notes pour 'Randria' (A choisi INF205 et MTH204)
-INSERT INTO notesEleves (idEleve, idMatiere, valeurNote) VALUES 
-(1, 1, 12.50), -- Web dynamique
-(1, 5, 14.00), -- Choix Option INF
-(1, 8, 11.00); -- Choix Option MTH
+INSERT INTO notesEleves (idEleve, idMatiere, valeurNote, numSemestre) VALUES 
+(1, 1, 12.50, 3), -- Web dynamique
+(1, 5, 14.00, 3), -- Choix Option INF
+(1, 8, 11.00, 4); -- Choix Option MTH
 
 -- Notes pour 'Sitraka' (A choisi INF204 et MTH206)
-INSERT INTO notesEleves (idEleve, idMatiere, valeurNote) VALUES 
-(2, 1, 10.00), 
-(2, 4, 13.50), 
-(2, 9, 12.00);
+INSERT INTO notesEleves (idEleve, idMatiere, valeurNote,numSemestre) VALUES 
+(2, 1, 10.00, 4), 
+(2, 4, 13.50, 4), 
+(2, 9, 12.00, 4);
 
 INSERT INTO users (email, password)
 VALUES ('admin@sysinfo.mg', 'password');
+
+
+
+
+

@@ -34,7 +34,7 @@ class Auth extends BaseController
         'user' => $user['email']
     ]);
 
-    return redirect()->to('/liste-eleves');
+    return redirect()->to('/list');
 }
 
         // ❌ erreur login

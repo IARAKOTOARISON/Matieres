@@ -52,9 +52,11 @@ CREATE TABLE notesEleves (
     idEleve INT NOT NULL,
     idMatiere INT NOT NULL,
     valeurNote DECIMAL(4,2),
+    numSemestre INT NOT NULL,
     FOREIGN KEY (idEleve) REFERENCES eleves(id),
     FOREIGN KEY (idMatiere) REFERENCES matieres(id)
 );
+
 
 
 CREATE TABLE users (
@@ -62,3 +64,33 @@ CREATE TABLE users (
     email VARCHAR(100),
     password VARCHAR(100)
 );
+
+
+-- Trigger pour insérer automatiquement dans programmeParcours lors de l'insertion d'une note
+DELIMITER $$
+
+CREATE TRIGGER trigger_insert_programmeParcours_on_notes
+AFTER INSERT ON notesEleves
+FOR EACH ROW
+BEGIN
+    DECLARE v_idParcours INT;
+    
+    -- Récupérer le parcours de l'étudiant
+    SELECT idParcours INTO v_idParcours 
+    FROM eleves 
+    WHERE id = NEW.idEleve 
+    LIMIT 1;
+    
+    -- Insérer dans programmeParcours si la combinaison n'existe pas déjà
+    IF NOT EXISTS (
+        SELECT 1 FROM programmeParcours 
+        WHERE idParcours = v_idParcours 
+        AND idMatiere = NEW.idMatiere
+        AND numSemestre = NEW.numSemestre
+    ) THEN
+        INSERT INTO programmeParcours (idParcours, idMatiere, numSemestre, idGroupeOption)
+        VALUES (v_idParcours, NEW.idMatiere, NEW.numSemestre, NULL);
+    END IF;
+END$$
+
+DELIMITER ;

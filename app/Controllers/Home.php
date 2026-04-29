@@ -6,6 +6,11 @@ class Home extends BaseController
 {
     public function list()
     {
+        // Vérifier que l'utilisateur est connecté
+        if (!session()->get('user')) {
+            return redirect()->to('/login');
+        }
+
         $model = new \App\Models\ElevesModel();
 
         $perPage = 2;

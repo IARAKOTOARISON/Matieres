@@ -42,36 +42,22 @@
       Liste des eleves
       
     </a>
-    <a href="form.html" class="nav-item">
-      <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-      Formulaire
-    </a>
 
     <div class="sidebar-section">Modules</div>
 
-    <a href="#" class="nav-item">
+    <a href="/notes/S3" class="nav-item">
       <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
-      Catalogue
+      S3
     </a>
-    <a href="#" class="nav-item">
+    <a href="/notes/S4" class="nav-item">
       <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      Comptabilité
+      S4
     </a>
-    <a href="#" class="nav-item">
+    <a href="/notes/L2" class="nav-item">
       <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      RH
-    </a>
-    <a href="#" class="nav-item">
-      <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      Rapports
+      L2
     </a>
 
-    <div class="sidebar-section">Système</div>
-
-    <a href="#" class="nav-item">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-      Paramètres
-    </a>
 
     <div class="sidebar-bottom">
       <a href="login.html" class="user-row">
@@ -113,7 +99,7 @@
               <th class="sortable">Etudiants</th>
               <th class="sortable">Matricule</th>
               <th class="sortable">Parcours</th>
-              <th>Actions</th>
+              <th>Actions (voir et inserer les notes)</th>
             </tr>
           </thead>
           <tbody>
@@ -147,7 +133,7 @@
                     <td><span class="badge badge-blue"><?= esc($eleve['nomParcours']) ?></span></td>
                     <td>
                     <div class="td-actions">
-                      <a href="<?= base_url('notes/formulaire/' . $eleve['id']) ?>" class="action-btn" title="Gérer les notes" ><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                      <a href="<?= base_url('notes/formulaire/' . $eleve['id']) ?>" class="action-btn" title="Gérer les notes" ><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/> <circle cx="12" cy="12" r="3"/></svg></a>
                     </div>
               </td>
                   </tr>

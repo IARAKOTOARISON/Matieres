@@ -28,3 +28,6 @@ $routes->get('notes', 'NotesController::index');
 $routes->get('notes/formulaire/(:num)', 'NotesController::formulaire/$1');
 $routes->post('notes/add', 'NotesController::add');
 $routes->get('notes/delete/(:num)', 'NotesController::delete/$1');
+
+
+$routes->get('/notes/(:segment)', 'Notes_tranches::notes_tranches/$1');

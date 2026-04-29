@@ -127,6 +127,7 @@ if (session()->getFlashdata('success')): ?>
                   <th>Code</th>
                   <th>Matière</th>
                   <th>Crédits</th>
+                  <th>Semestre</th>
                   <th>Note</th>
                   <th>Actions</th>
                 </tr>
@@ -141,6 +142,16 @@ if (session()->getFlashdata('success')): ?>
                     <td style="color:var(--c-muted);font-family:monospace;font-weight:600;"><?= htmlspecialchars($matiere['codeMatiere'] ?? 'N/A') ?></td>
                     <td><?= htmlspecialchars($matiere['intituleMatiere'] ?? 'N/A') ?></td>
                     <td style="text-align: center;"><?= htmlspecialchars($matiere['nombreCredit'] ?? 'N/A') ?></td>
+                    <td>
+                      <select 
+                        name="semesters[<?= htmlspecialchars($matiere['id']) ?>]"
+                        style="width: 70px; padding: 8px 6px; border: 1.5px solid var(--c-border); border-radius: 6px; font-size: 14px;">
+                        <option value="">--</option>
+                        <?php foreach ([3, 4] as $s): ?>
+                          <option value="<?= $s ?>" <?= ($note && $note['numSemestre'] == $s) ? 'selected' : '' ?>>S<?= $s ?></option>
+                        <?php endforeach; ?>
+                      </select>
+                    </td>
                     <td>
                       <input 
                         type="number" 
