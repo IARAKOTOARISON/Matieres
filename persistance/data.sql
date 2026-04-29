@@ -30,7 +30,7 @@ INSERT INTO groupeOption (idMatiere, idParcours, numSemestre) VALUES
 (9, 3, 4); -- MTH206
 
 
-INSERT INTO eleves (nomEleve, ETU, idParcours) VALUES 
+INSERT INTO eleves (nom, ETU, idParcours) VALUES 
 ('Randria Luc', 4400, 3), -- Web et Design
 ('Sitraka Antonio', 4401, 3), -- Web et Design
 ('Faly Niaina', 4402, 1),    -- Développement
@@ -48,7 +48,3 @@ INSERT INTO notesEleves (idEleve, idMatiere, valeurNote) VALUES
 (2, 1, 10.00), 
 (2, 4, 13.50), 
 (2, 9, 12.00);
-
--- Note pour 'Faly' (Matière obligatoire S3)
-INSERT INTO notesEleves (idEleve, idMatiere, valeurNote) VALUES 
-(3, 10, 15.00); -- INF201
