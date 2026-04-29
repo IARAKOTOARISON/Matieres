@@ -19,7 +19,7 @@ CREATE TABLE parcours (
 -- 3. Groupes d'options (ex: "Choisir 1 UE parmi 3")
 CREATE TABLE groupeOption (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nomGroupe VARCHAR(100), -- Ex: "Option Informatique S4" [cite: 4, 6, 9]
+    idMatiere INT NOT NULL,
     idParcours INT NOT NULL,
     numSemestre INT NOT NULL, -- ex: 4 [cite: 4, 6, 9]
     FOREIGN KEY (idParcours) REFERENCES parcours(id)
